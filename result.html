@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Sports Activity Finder</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="static/css/style.css">
+
+	</head>
+  	<body style="background-image: url('static/images/cycling.jpeg');">
+        <div class="navbar-brand float-right">
+          <span class="navbar-item ">
+            <a class="button is-link" href="./">Home</a>
+          </span>
+
+        </div>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h1 class="hmb-4" style="color:white"><b>Sports Activity Finder</b></h1>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-12">
+					<div class="wrapper">
+
+						<div class="row no-gutters">
+							<div class="col-md-5">
+								<div class="contact-wrap w-100 p-md-5 p-4">
+
+									{% for pr in prediction_text %}
+
+                                        <div class="contact-wrap w-100 p-md-5 p-4">
+                                            <div class="contact-wrap w-100 p-md-5 p-4">
+                                            <h4>Activity - <b> {{ pr }}</b></h4>
+
+
+                                        </div>
+                                        </div>
+                                    {% endfor %}
+
+								</div>
+
+							</div>
+							<div class="col-md-6 d-flex align-items-stretch">
+                                {% for pr in prediction_text %}
+								    <div class="info-wrap w-100 p-5 img" style="background-image: url(static/images/running.jpg);">
+			          			    </div>
+                                {% endfor %}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	</body>
+</html>
+
